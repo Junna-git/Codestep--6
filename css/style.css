@@ -1,0 +1,180 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+  color: #2d2d2d;
+}
+
+img {
+  min-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+#main-visual {
+  width: 90vw;
+  margin: 4% auto 0 auto;
+}
+
+#main-visual img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+header {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32px 0;
+  margin: 0 auto 30px auto;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+header ul li {
+  font-size: 0.875rem;
+  margin-right: 30px;
+}
+
+header ul li:last-child {
+  margin: 0;
+}
+
+.site-title {
+  width: 110px;
+  line-height: 1px;
+  margin: 0 50px 0 0;
+}
+
+.site-title img {
+  width: 100%;
+  vertical-align: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main {
+  margin-bottom: 60px;
+}
+
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content .img {
+  width: 50%;
+}
+
+main .content .img img {
+  max-width: 100%;
+}
+
+main .content .text {
+  width: 50%;
+  padding: 0 7%;
+  /* spanタグを使用しているため、「display: inline-block;」を設定することで、改行されてmargin-bottomが使用できるようになる。※pタグを使用してもよいが、文章ではないため今回はspanタグを選択 */
+}
+
+main .content .text h2 {
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+main .content .text span {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+main #concept {
+  margin-bottom: 60px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.875rem;
+  padding: 20px 0;
+}
+
+footer .footer-logo {
+  width: 110px;
+}
+
+footer .footer-logo img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 767px) {
+  #main-visual {
+    width: 100%;
+    margin: 0;
+  }
+  #main-visual img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  header {
+    width: 100%;
+    padding: 20px 18px;
+  }
+  main .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .content .img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  main .content .text {
+    width: 100%;
+    padding: 0;
+  }
+  main .content .text h2 {
+    font-size: 1.25rem;
+  }
+  main #work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+/*# sourceMappingURL=style.css.map */

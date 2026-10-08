@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Crimson Text', serif;
+    color: #2d2d2d;
+}
+img {
+    min-width: 100%;
+    vertical-align: bottom;
+}
+a {
+    text-decoration: none;
+    color: #2d2d2d;
+    display: block;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+// main-visual
+#main-visual {
+    width: 90vw;
+    margin: 4% auto 0 auto;
+    img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+}
+
+// header
+header {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    margin: 0 auto 30px auto;
+    ul {
+        display: flex;
+        margin: 0;
+        li {
+            font-size: 0.875rem;
+            margin-right: 30px;
+        }
+        li:last-child {
+            margin: 0;
+        }
+    }
+}
+.site-title {
+    width: 110px;
+    line-height: 1px;
+    margin: 0 50px 0 0;
+    img {
+        width: 100%;
+        vertical-align: bottom;
+        object-fit: cover;
+    }
+}
+
+// main
+main {
+    margin-bottom: 60px;
+    .content {
+        display: flex;
+        align-items: center;
+        .img {
+            width: 50%;
+            img {
+                max-width: 100%;
+            }
+        }
+        .text {
+            width: 50%;
+            padding: 0 7%;
+            h2 {
+                font-weight: normal;
+                margin-bottom: 4px;
+            }
+            span {
+                display: inline-block;
+                margin-bottom: 25px;
+            }
+            /* spanタグを使用しているため、「display: inline-block;」を設定することで、改行されてmargin-bottomが使用できるようになる。※pタグを使用してもよいが、文章ではないため今回はspanタグを選択 */
+        }
+    }
+    #concept {
+        margin-bottom: 60px;
+    }
+}
+
+// footer
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding: 20px 0;
+    .footer-logo {
+        width: 110px;
+        img {
+            max-width: 100%;
+            vertical-align: bottom;
+        }
+    }
+}
+
+
+// レスポンシブ
+@media screen and (max-width: 767px) {
+    #main-visual {
+        width: 100%;
+        margin: 0;
+        img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+    }
+    header {
+        // padding: 20px 0;
+        // margin: 0 auto 0 18px;
+        width: 100%;
+        padding: 20px 18px;
+    }
+    main {
+        .content {
+            flex-direction: column;
+            .img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .text {
+                width: 100%;
+                padding: 0;
+                h2 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        #work {
+            flex-direction: column-reverse;
+        }
+    }
+}
